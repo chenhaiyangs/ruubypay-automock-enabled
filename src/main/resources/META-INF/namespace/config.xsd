@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        xmlns:mock="http://www.ruubypay.com/schema/automock"
+        xmlns:tool="http://www.springframework.org/schema/tool"
+        targetNamespace="http://www.ruubypay.com/schema/automock"
+        elementFormDefault="qualified">
+
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+    <xsd:import namespace="http://www.springframework.org/schema/tool" />
+
+    <xsd:simpleType name="mockConfigBean">
+        <xsd:annotation>
+            <xsd:appinfo>
+                <tool:annotation kind="ref">
+                    <tool:assignable-to type="com.ruubypay.mock.variable.Condition" />
+                </tool:annotation>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:union memberTypes="xsd:string" />
+    </xsd:simpleType>
+
+    <xsd:simpleType name="exceptionContainer">
+        <xsd:annotation>
+            <xsd:appinfo>
+                <tool:annotation kind="ref">
+                    <tool:assignable-to type="com.ruubypay.mock.variable.ExceptionWapper" />
+                </tool:annotation>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:union memberTypes="xsd:string" />
+    </xsd:simpleType>
+
+
+
+    <xsd:element name="handler" type="mock:handler"/>
+
+    <xsd:complexType name="handler">
+        <xsd:attribute name="id" type="xsd:string" default="mockHandler"/>
+        <xsd:attribute name="mock-condition-ref" type="mock:mockConfigBean" use="required"/>
+        <xsd:attribute name="exceptions-ref" type="mock:exceptionContainer" use="required"/>
+    </xsd:complexType>
+
+</xsd:schema>
