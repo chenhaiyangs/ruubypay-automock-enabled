@@ -39,6 +39,7 @@ public class MockHandler {
      * @param proxyChain proxyChain
      * @param mockEnabled 注解
      * @return 返回程序执行结果
+     * @throws Throwable 抛出异常
      */
     public Object proceed(MockEnabledProxyChain proxyChain, MockEnabled mockEnabled) throws Throwable {
 

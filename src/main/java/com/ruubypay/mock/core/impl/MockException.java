@@ -26,6 +26,7 @@ public class MockException {
      * 获取要拦截的方法对应的异常时mock要抛出的Exception类
      * @param proxyChain 代理类
      * @return 返回具体方法要抛的异常。
+     * @throws NoMockExceptionFoundException 异常
      */
     public Throwable getMockException(MockEnabledProxyChain proxyChain) throws NoMockExceptionFoundException {
 

@@ -14,6 +14,7 @@ public class ParseString{
 
     /**
      * 将字符串转换为数字
+     * @param booleanStr 布尔字符串
      * @return 返回布尔类型
      */
     public static Boolean parseStringToBoolean(String booleanStr){
@@ -40,7 +41,7 @@ public class ParseString{
     }
 
     /**
-     * 将json转为map<String,Boolean>
+     * 将json转为map(string,Boolean)
      * @param json json串
      * @return 返回转换结果
      */
@@ -49,7 +50,7 @@ public class ParseString{
     }
 
     /**
-     * 将json转为map<String,Long>
+     * 将json转为map(string,Long)
      * @param json json串
      * @return 返回转换结果
      */
