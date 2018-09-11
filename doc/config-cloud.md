@@ -1,10 +1,10 @@
-# 框架已经内置了一个和config-toolkit热配置集成的Condition实现类
+# 框架已经内置了一个和configx热配置集成的Condition实现类
 
-    框架已经内置了一个和config-toolkit热配置集成的Confition实现类
+    框架已经内置了一个和configx热配置集成的Confition实现类
     全类路径为：
     com.ruubypay.mock.variable.impl.DefaultCondition
     
-    因此，如果想使automock-enabled和config-toolkit一键集成。
+    因此，如果想使automock-enabled和configx一键集成。
     直接使用整个默认的实现即可。原理很简单。不妨贴出源代码：
     
         /**
@@ -71,9 +71,9 @@
     所有的配置都为String类型，在实现的函数中转为了Boolean,Long和map。原来的map参数在配置中心只需要配置成json形式的字符串即可。
     
     配置中心只需要有一个组的参数配置为该javaBean的属性名，即可。map形式的参数配置为json字符串。
-    然后com.ruubypay.mock.variable.impl.DefaultCondition和config-toolkit的一个组绑定为热配置，就能实现mock在线热切。
+    然后com.ruubypay.mock.variable.impl.DefaultCondition和configx的一个组绑定为热配置，就能实现mock在线热切。
     
-    详见config-toolkit的使用。
+    详见ruubypay-configx-core的使用。
 
 
 
