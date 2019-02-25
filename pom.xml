@@ -4,7 +4,7 @@
 
     <groupId>com.github.chenhaiyangs</groupId>
     <artifactId>ruubypay-automock-enabled</artifactId>
-    <version>1.1-RELEASE</version>
+    <version>1.2-RELEASE</version>
     <packaging>jar</packaging>
 
     <name>ruubypay-automock-enabled</name>

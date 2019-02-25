@@ -61,16 +61,31 @@ public class DefaultCondition implements Condition{
 
     @Override
     public Map<String, Boolean> getMethodIsOpen() {
-        return ParseString.parseJsonAsBooleanMap(opens);
+       try {
+           return ParseString.parseJsonAsBooleanMap(opens);
+       }catch (Exception e){
+           //jgnore it
+           return null;
+       }
     }
 
     @Override
     public Map<String, Long> getMethodSleepTime() {
-        return ParseString.parseJsonAsLongMap(sleepTimes);
+        try{
+            return ParseString.parseJsonAsLongMap(sleepTimes);
+        }catch (Exception e){
+            // ignore
+            return null;
+        }
     }
 
     @Override
     public Map<String, Boolean> getMethodIsException() {
-        return ParseString.parseJsonAsBooleanMap(exceptions);
+        try{
+            return ParseString.parseJsonAsBooleanMap(exceptions);
+        }catch (Exception e){
+            //ignore it
+            return null;
+        }
     }
 }
