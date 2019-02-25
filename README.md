@@ -48,7 +48,7 @@
         <dependency>
             <groupId>com.github.chenhaiyangs</groupId>
             <artifactId>ruubypay-automock-enabled</artifactId>
-            <version>1.1-RELEASE</version>
+            <version>1.2-RELEASE</version>
         </dependency>    
         然后依赖ruubypay-automock-enabled的API完成自己的mock实现开发。
     
